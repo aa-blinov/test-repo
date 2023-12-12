@@ -1,0 +1,103 @@
+name: Отчет об ошибке (форма)
+description: Типовой отчет об ошибке веб-платформы
+labels: bug
+assignees: nk-meliksetyan
+
+body:
+  - type: textarea
+    id: general-description
+    attributes:
+      label: Общее описание проблемы
+      description: Опишите проблему, чтобы было очевидно, что поведение системы некорректно.
+      placeholder: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Как повторить
+      description: Последовательность шагов, которые необходимо воспроизвести, чтобы воспроизвести ошибку.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Фактический результат
+      description: Опишите, какой результат вы получили.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Ожидаемое поведение
+      description: Опишите, что ожидалось в идеальном случае.
+    validations:
+      required: true
+
+  - type: input
+    id: project-link
+    attributes:
+      label: Ссылка на проект
+      description: Полная ссылка на проект, включая домен.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Операционная система
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Браузер, где была замечена проблема
+      multiple: true
+      options:
+      - Chrome
+      - Safari
+      - Firefox
+      - Microsoft Edge
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: application-version
+    attributes:
+      label: Версия приложения
+      description: Полный номер версии приложения.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты
+      description: Скриншоты, демонстрирующие ошибку.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Лог консоли и HAR
+      description: Необходимые артефакты для диагностики проблемы.
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Дополнительный информация
+      description: Любая информация, которая может быть полезна при выявлении ошибки.
