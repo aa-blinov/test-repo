@@ -1,6 +1,6 @@
 name: Отчет об ошибке (форма)
 description: Типовой отчет об ошибке веб-платформы
-labels: bug
+labels: ["bug"]
 assignees: nk-meliksetyan
 
 body:
